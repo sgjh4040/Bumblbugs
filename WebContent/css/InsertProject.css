@@ -1,0 +1,344 @@
+
+
+*{
+	font-family: 'Nanum Gothic', sans-serif;
+}
+input{
+	margin:5px 0;
+}
+
+body {
+	margin: 0;
+	overflow-x: hidden;
+	min-width: 320px;
+	background: #f6f5f5;
+	font-size: 14px;
+	line-height: 1.7em;
+	color: rgba(0, 0, 0, .87);
+}
+
+body, h1, h2, h3, h4, h5 {
+	padding: 0;
+	font-family: SpoqaHanSans, Helvetica Neue, Arial, Helvetica, sans-serif;
+}
+
+div, h3, p {
+	word-break: break-all;
+}
+
+body, html {
+	height: 100%;
+	font-size: 13px;
+}
+
+div {
+	display: block;
+	max-width: 100% !important;
+}
+
+*, :after, :before {
+	box-sizing: inherit;
+}
+
+a {
+	color: #fa6462;
+}
+
+a, a:hover {
+	text-decoration: none;
+}
+
+/*---------------------------------------------------------------*/
+.header {
+	position: relative;
+	padding-top: 3.5em;
+	color: #3c3737;
+	background: #fff;
+}
+/*---------------------------------------------------------------*/
+.nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 1em;
+	text-align: center;
+	border-top: 3px solid #dcddde;
+	border-bottom: 1px solid #efeded;
+	color: #767676;
+}
+
+.navRight, .navLeft {
+	font-weight: 700;
+	width: 7rem;
+}
+
+.navRight {
+	float: left;
+	text-align: left;
+	margin-left: 10%;
+}
+
+.navCenter {
+	font-family: TumblbugLogo;
+	font-weight: 400;
+}
+
+.navLeft {
+	float: right;
+	text-align: right;
+	margin-right: 10%;
+}
+/*---------------------------------------------------------------*/
+.title {
+	padding: 1em 0;
+}
+
+.title_1 {
+	margin-top: 2em;
+	margin-bottom: 2em !important;
+	color: #dcddde;
+	font-size: 1.5em;
+	font-weight: 400;
+	text-align: center;
+	border: none;
+	padding: 0;
+	font-family: SpoqaHanSans, Helvetica Neue, Arial, Helvetica, sans-serif;
+	line-height: 1.2857em;
+	text-transform: none;
+}
+
+.ready {
+	background-color: #fff !important;
+	color: #767676 !important;
+	border-color: #767676 !important;
+	margin-top: -.29165em;
+	margin-left: .5rem;
+	vertical-align: middle;
+	font-size: .78571429rem;
+	background: none #fff;
+	border: 1px solid rgba(0, 0, 0, .1);
+	box-shadow: none;
+	margin-right: 0;
+	display: inline-block;
+	line-height: 1;
+	margin: 0 .14285714em;
+	padding: .5833em .833em;
+	text-transform: none;
+	font-weight: 700;
+	border-radius: .28571429rem;
+	transition: background .1s ease;
+}
+/*---------------------------------------------------------------*/
+.thirdDiv1, .thirdDiv2 {
+	margin-top: 0;
+	font-weight: 400;
+	position: relative;
+	min-height: 1em;
+	margin: 1em 0;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	line-height: 1.7em;
+	transition: opacity .1s ease, color .1s ease, background .1s ease,
+		box-shadow .1s ease;
+	border-radius: .28571429rem;
+	box-shadow: inset 0 0 0 0 rgba(34, 36, 38, .22), 0 0 0 0 transparent;
+	color: #545454;
+	font-weight: 400;
+}
+
+.thirdDiv1 {
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	font-size: .92857143em;
+	background-color: #dff0ff;
+	color: #3a6ff2;
+}
+
+.thirdDiv2 {
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 0.5rem;
+	margin-bottom: 0;
+	background: rgba(0, 0, 0, .03);
+	position: relative;
+	text-align: center;
+	font-size: .92857143em;
+}
+/*---------------------------------------------------------------*/
+.thirdBtn {
+	text-align: right;
+	margin-top: 10px;
+	margin-right: 10%;
+}
+
+.look, .review {
+	display: inline-block;
+	text-align: center;
+}
+
+.lookBtn {
+	box-shadow: inset 0 0 0 2px black !important;
+	color: black !important;
+	font-weight: 700;
+	border-radius: .28571429rem;
+	text-transform: none;
+	font-size: .92857143rem;
+	padding: .78571429em 1.5em;
+	min-height: 1em;
+	cursor: pointer;
+}
+
+.reviewBtn {
+	box-shadow: inset 0 0 0 2px #fa6462 !important;
+	color: #fa6462 !important;
+	font-weight: 700;
+	border-radius: .28571429rem;
+	text-transform: none;
+	font-size: .92857143rem;
+	padding: .78571429em 1.5em;
+	min-height: 1em;
+	cursor: pointer;
+}
+/*---------------------------------------------------------------*/
+ul.tabs {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+ul.tabs li {
+	background: none;
+	color: #222;
+	display: inline-block;
+	padding: 10px 15px;
+	cursor: pointer;
+}
+
+ul.tabs li.current {
+	background: #ededed;
+	color: #222;
+}
+
+.tab-content {
+	display: none;
+	background: #ededed;
+	padding: 15px;
+}
+
+.tab-content.current {
+	display: inherit;
+}
+/*---------------------------------------------------------------*/
+.p1_main {
+	width: 80%;
+	margin: 0 auto;
+}
+/*-------------------------------------------------------------------------*/
+.p1All, .p2All, .p3All, .p4All {
+	padding: 0.5em 1.5em !important;
+	top: 0;
+	bottom: 0;
+	border-radius: 0;
+	margin: 0;
+	width: auto;
+	box-shadow: none;
+	border: none;
+	border: 1px solid rgba(0, 0, 0, .1);
+	position: relative;
+	background: #fff;
+	opacity: 1;
+	transform: translateZ(0);
+	animation-duration: .3s;
+}
+
+.title {
+	color: #767676;
+	margin-bottom: .5rem;
+	margin: 0 0 .28571429rem;
+	font-weight: 700;
+	text-transform: none;
+	padding: 0;
+}
+
+.p1_inputBox {
+	display: inline-block;
+	position: relative;
+	padding-bottom: 1rem;
+	padding-left: 1rem;
+	cursor: pointer;
+}
+
+.btnAll {
+	display: inline-block;
+	position: relative;
+	float: right;
+	padding-right: 1rem;
+	padding-bottom: 1rem;
+	cursor: pointer;
+}
+
+.selectPC {
+	height: 17px;
+	padding: 7px;
+	border: 1px solid rgba(0, 0, 0, .1);
+	visibility: visible;
+	cursor: pointer;
+}
+
+.p3_2_input {
+	width: 500px;
+}
+/*-------------------------------------------------------------------------*/
+.footer1 {
+	float: right;
+	margin-top: 30px;
+}
+
+.next1 {
+	float: right;
+	box-shadow: inset 0 0 0 0 rgba(0, 0, 0, .1);
+	background-color: #3a6ff2;
+	color: #fff;
+	text-shadow: none;
+	background-image: none;
+	padding: .78571429em;
+	font-size: 1rem;
+	width: 7em;
+	min-height: 1em;
+	border: none;
+	cursor: pointer;
+}
+
+.next2, .next3, .storage {
+	float: right;
+	box-shadow: inset 0 0 0 0 rgba(0, 0, 0, .1);
+	background-color: #3a6ff2;
+	color: #fff;
+	text-shadow: none;
+	background-image: none;
+	padding: .78571429em;
+	font-size: 1rem;
+	width: 7em;
+	min-height: 1em;
+	border: none;
+	cursor: pointer;
+	margin-top: 50px;
+}
+
+.back2, .back3, .back4 {
+	float: left;
+	box-shadow: inset 0 0 0 0 rgba(0, 0, 0, .1);
+	background-color: #e0e1e2 none;
+	color: rgba(0, 0, 0, .6);
+	text-shadow: none;
+	background-image: none;
+	padding: .78571429em;
+	font-size: 1rem;
+	width: 7em;
+	min-height: 1em;
+	border: none;
+	cursor: pointer;
+	margin-top: 50px;
+}

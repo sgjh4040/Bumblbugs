@@ -1,0 +1,162 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	color: #676363;
+	font-family: 'Nanum Gothic', sans-serif;
+}
+
+
+ul {
+	color: #676363;
+	font-size: 15px;
+	list-style: none;
+}
+
+li {
+	display: inline-block;
+}
+
+body {
+	overflow-x: hidden;
+	min-height: 100%;
+	height: auto;
+}
+
+.header {
+	width: 100%;
+	background-color: #fff;
+	border-bottom: 1px solid #efefef;
+}
+
+.header-title {
+	font-size: 22px;
+	text-align: center;
+	padding: 20px;
+}
+
+.scanline {
+	width: 100%;
+	position: relative;
+	background: #fafafa
+}
+
+.b-align {
+	text-align: center;
+	padding: 50px;
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: cover;
+}
+
+.b-menu-item {
+	padding: 10px;
+	text-decoration: none;
+}
+
+.dek {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.b-container-wrap {
+	padding-top: 20px;
+	position: relative;
+}
+
+.b-container {
+	width: 700px;
+	margin: 0 auto;
+}
+
+.cancel-box {
+	color: #676363;
+	line-height: 28px;
+	position: relative;
+	background-color: #ebeae5;
+	padding: 20px;
+}
+
+.cancel-box-head {
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+
+.cancel-box-mid {
+	display: flex;
+}
+
+.cancel-box-img {
+	margin-right: 15px;
+}
+
+.cancel-box-content {
+	width: 50%;
+	width: 65%;
+	height: 100%;
+}
+
+.cancel-box-price {
+	background-color: #433;
+	color: #f4f3f3;
+	font-size: 13px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	border-radius: 5px;
+}
+
+.cancel-box-footer {
+	text-align: center;
+}
+
+.cancel-button {
+	cursor: pointer;
+	display: inline-block;
+	min-height: 2em;
+	outline: none;
+	border: none;
+	vertical-align: baseline;
+	box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px
+		rgba(0, 0, 0, 0.1) inset;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-transition: opacity 0.1s ease, background-color 0.1s ease, color
+		0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+	transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s
+		ease, box-shadow 0.1s ease, background 0.1s ease;
+	-webkit-tap-highlight-color: transparent;
+	margin: 0 .25em 0 0;
+	border-radius: 0.28571429rem;
+	text-transform: none;
+	text-shadow: none;
+	font-weight: bold;
+	line-height: 1em;
+	font-style: normal;
+	text-align: center;
+	-webkit-text-decoration: none;
+	text-decoration: none;
+	color: rgba(0, 0, 0, .6);
+	background-color: #e7e7e7;
+	background-color: #fa6462;
+	color: #fff;
+	padding: 1em 1.5em;
+	font-size: 1em;
+	width: 20%;
+	opacity: 1;
+}
+
+.cancel-button {
+	margin: 0 .42857143em 0 -.21428571em;
+}
+
+.cancel-button:hover, .cancel-button:focus, .cancel-button:active {
+	background-color: #d9d9d9;
+	color: rgba(0, 0, 0, 8);
+}
+
+.cancel-button:hover, .cancel-button:focus, .cancel-button:active {
+	background-color: #ff4543;
+	color: #fff;
+}

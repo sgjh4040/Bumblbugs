@@ -181,7 +181,7 @@ a, a:link, a:visited, a:hover {
 
 
    <div style="margin: 0 auto; width: 1060px; text-align: center;">
-      <a href="Mypage/logout.jsp">
+      <a href="../Mypage/logout.jsp">
          <button class="logoutButton">로그아웃</button>
       </a>
    </div>

@@ -17,7 +17,7 @@
     		<script>
     		
     		alert("관리자 페이지로 이동합니다.");
-    		location.href="../adminView.jsp";
+    		location.href="../Admin/adminView.jsp";
     		
     		
     		</script>

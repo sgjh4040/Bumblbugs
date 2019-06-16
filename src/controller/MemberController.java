@@ -59,14 +59,14 @@ public class MemberController extends HttpServlet {
 		if (action == null || action.equals("/listMembers.do")) {
 			ArrayList<UserBean> membersList = memberDAO.listMember();
 			request.setAttribute("membersList", membersList);
-			nextPage = "/listMembers.jsp";
+			nextPage = "../Admin/listMembers.jsp";
 		}else if(action.equals("/addMember.do")) {
 			
 		}else if(action.equals("/modMemberForm.do")) {
 			String u_idx = request.getParameter("u_idx");
 			UserBean memInfo = memberDAO.getMember(u_idx);
 			request.setAttribute("memInfo", memInfo);
-			nextPage = "/modMemberForm.jsp";
+			nextPage = "../Admin/modMemberForm.jsp";
 		}else if(action.equals("/modMember.do")) {
 			String u_nm = request.getParameter("u_nm");
 			String u_email = request.getParameter("u_email");
@@ -97,7 +97,7 @@ public class MemberController extends HttpServlet {
 		}else {
 			ArrayList<UserBean> membersList = memberDAO.listMember();
 			request.setAttribute("membersList", membersList);
-			nextPage = "/listMembers.jsp";
+			nextPage = "../Admin/listMembers.jsp";
 		}
 		
 		RequestDispatcher dispatch = request.getRequestDispatcher(nextPage);

@@ -63,7 +63,7 @@ public class MainDAO {
     	
     	try {
     		con = pool.getConnection();
-    		sql = "select PJ.pj_idx, PJ.pj_title, PJ.pj_img, PJ.pj_url, PJ.leader_nm, PJ.pj_end_dt, PJ.pj_reg_dt, PJ.pj_f_price, PJ.obj_price from pj_tb PJ;";
+    		sql = "select PJ.pj_idx, PJ.pj_title, PJ.pj_img, PJ.pj_url, PJ.leader_nm, PJ.pj_end_dt, PJ.pj_reg_dt, PJ.pj_f_price, PJ.obj_price from pj_tb PJ where TO_days(pj_end_dt)-TO_days(now())>=1;";
     		pstmt = con.prepareStatement(sql);
 //    		pstmt.setString(1, u_idx);
     		rs = pstmt.executeQuery();
@@ -217,7 +217,7 @@ public class MainDAO {
     		con = pool.getConnection();
     		sql = "select PJ.pj_idx, PJ.pj_title, PJ.pj_end_dt, PJ.pj_reg_dt, PJ.pj_img, PJ.pj_url, PJ.leader_nm, PJ.pj_f_price, PJ.obj_price, PJ.pj_sup_num  \r\n" + 
     				"from pj_tb PJ\r\n" + 
-    				"WHERE pj_category='게임';";
+    				"WHERE pj_category='게임' AND TO_days(pj_end_dt)-TO_days(now())>=1;";
     		pstmt = con.prepareStatement(sql);
 //    		pstmt.setString(1, u_idx);
     		rs = pstmt.executeQuery();
@@ -255,7 +255,7 @@ public class MainDAO {
     		con = pool.getConnection();
     		sql = "select PJ.pj_idx, PJ.pj_title, PJ.pj_end_dt, PJ.pj_reg_dt, PJ.pj_img, PJ.pj_url, PJ.leader_nm, PJ.pj_f_price, PJ.obj_price, PJ.pj_sup_num  \r\n" + 
     				"from pj_tb PJ\r\n" + 
-    				"WHERE pj_category='공연';";
+    				"WHERE pj_category='공연' AND TO_days(pj_end_dt)-TO_days(now())>=1;";
     		pstmt = con.prepareStatement(sql);
 //    		pstmt.setString(1, u_idx);
     		rs = pstmt.executeQuery();
@@ -293,7 +293,7 @@ public class MainDAO {
     		con = pool.getConnection();
     		sql = "select PJ.pj_idx, PJ.pj_title, PJ.pj_end_dt, PJ.pj_reg_dt, PJ.pj_img, PJ.pj_url, PJ.leader_nm, PJ.pj_f_price, PJ.obj_price, PJ.pj_sup_num  \r\n" + 
     				"from pj_tb PJ\r\n" + 
-    				"WHERE pj_category='푸드';";
+    				"WHERE pj_category='푸드' AND TO_days(pj_end_dt)-TO_days(now())>=1;";
     		pstmt = con.prepareStatement(sql);
 //    		pstmt.setString(1, u_idx);
     		rs = pstmt.executeQuery();
@@ -331,7 +331,7 @@ public class MainDAO {
     		con = pool.getConnection();
     		sql = "select PJ.pj_idx, PJ.pj_title, PJ.pj_end_dt, PJ.pj_reg_dt, PJ.pj_img, PJ.pj_url, PJ.leader_nm, PJ.pj_f_price, PJ.obj_price, PJ.pj_sup_num  \r\n" + 
     				"from pj_tb PJ\r\n" + 
-    				"WHERE pj_category='디자인';";
+    				"WHERE pj_category='디자인' AND TO_days(pj_end_dt)-TO_days(now())>=1;";
     		pstmt = con.prepareStatement(sql);
 //    		pstmt.setString(1, u_idx);
     		rs = pstmt.executeQuery();
@@ -370,7 +370,7 @@ public class MainDAO {
     		con = pool.getConnection();
     		sql = "select PJ.pj_idx, PJ.pj_title, PJ.pj_end_dt, PJ.pj_reg_dt, PJ.pj_img, PJ.pj_url, PJ.leader_nm, PJ.pj_f_price, PJ.obj_price, PJ.pj_sup_num, PJ.search_tag \r\n" + 
     				"from pj_tb PJ\r\n"  
-    				+"where PJ.pj_title like ?;";
+    				+"where PJ.pj_title like ? AND TO_days(pj_end_dt)-TO_days(now())>=1;";
     		pstmt = con.prepareStatement(sql);
     		pstmt.setString(1, searchword);
     		rs = pstmt.executeQuery();
@@ -409,7 +409,7 @@ public class MainDAO {
     		con = pool.getConnection();
     		sql = "select PJ.pj_idx, PJ.pj_title, PJ.pj_end_dt, PJ.pj_reg_dt, PJ.pj_img, PJ.pj_url, PJ.leader_nm, PJ.pj_f_price, PJ.obj_price, PJ.pj_sup_num, PJ.search_tag \r\n" + 
     				"from pj_tb PJ\r\n"  
-    				+"where PJ.search_tag like ?;";
+    				+"where PJ.search_tag like ? AND TO_days(pj_end_dt)-TO_days(now())>=1;";
     		pstmt = con.prepareStatement(sql);
     		pstmt.setString(1, searchword);
     		rs = pstmt.executeQuery();

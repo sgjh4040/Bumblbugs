@@ -20,6 +20,7 @@
 		ArrayList<ProjectBean> concertlist 	= MainDAO.getConcertProject();
 		ArrayList<ProjectBean> foodlist 	= MainDAO.getFoodProject();
 		ArrayList<ProjectBean> designlist 	= MainDAO.getDesignProject();
+		
 %>
 <!DOCTYPE html>
 <html>
@@ -101,15 +102,15 @@
 					<c:set var="pjlist" value="<%=pjlist %>" />
 
 					<a href="fundProject/ProjectPage.jsp?pj_idx=<%=pjlist.get(24).getPj_idx()%>"><img
-						src="Bumblbugimg/s_pj_idx25.jpg" class="ph"></a>
+						src="Bumblbugimg/<%=pjlist.get(24).getPj_img()%>" class="ph"></a>
 					<a href="fundProject/ProjectPage.jsp?pj_idx=<%=pjlist.get(25).getPj_idx()%>"><img
-						src="Bumblbugimg/s_pj_idx26.jpg"
+						src="Bumblbugimg/<%=pjlist.get(25).getPj_img()%>"
 						class="ph novisual"></a> <a href="fundProject/ProjectPage.jsp?pj_idx=<%=pjlist.get(26).getPj_idx()%>"><img
-						src="Bumblbugimg/s_pj_idx27.jpg"
+						src="Bumblbugimg/<%=pjlist.get(26).getPj_img()%>"
 						class="ph novisual"></a> <a href="fundProject/ProjectPage.jsp?pj_idx=<%=pjlist.get(27).getPj_idx()%>"><img
-						src="Bumblbugimg/s_pj_idx28.jpg"
+						src="Bumblbugimg/<%=pjlist.get(27).getPj_img()%>"
 						class="ph novisual"></a> <a href="fundProject/ProjectPage.jsp?pj_idx=<%=pjlist.get(28).getPj_idx()%>"><img
-						src="Bumblbugimg/s_pj_idx29.jpg"
+						src="Bumblbugimg/<%=pjlist.get(28).getPj_img()%>"
 						class="ph novisual"></a>
 						
 					<span class="header-PJ_title"><%=pjlist.get(24).getPj_title()%></span>

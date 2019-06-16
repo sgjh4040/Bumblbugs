@@ -34,8 +34,8 @@ public class EmailSendController extends HttpServlet {
 		
 		String from = "sgjh40222@gmail.com";
 		String subject = "임시비밀번호";
-		String content = "하이";
-		String to = "sgjh4040@naver.com";
+		String content = request.getParameter("code_check");
+		String to = request.getParameter("u_email");
 		String cc = "sgjh4040@nate.com";
 		
 		
@@ -94,8 +94,8 @@ public class EmailSendController extends HttpServlet {
 			e.printStackTrace();
 		}
 	
-		RequestDispatcher rd = request.getRequestDispatcher("../Login/Member.jsp");
-		
+		RequestDispatcher rd = request.getRequestDispatcher("./Login/Member.jsp");
+		rd.forward(request, response);
 		
 	}
 	

@@ -1,10 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:set var="contextPath" value="${pageContext.request.contextPath}" />
+
+<%!
+		public int getRandom() {
+		int random = 0;
+		random = (int)Math.floor(Math.random()*9999+1);
+		return random;
+	}
+	%>
+	
+	<%String code_check = request.getParameter("code_check"); %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<link href="login.css" rel="stylesheet" type="text/css">
+<link href="${contextPath}/css/login.css" rel="stylesheet"
+	type="text/css" media="all">
 <script type="text/javascript" src="../js/script.js"></script>
 <title>Insert title here</title>
 
@@ -32,6 +45,7 @@ function checkNum(){
 </script>
 </head>
 <body>
+<div>test: <%=code_check %></div>
 	<div class="membership_wrap">
 		<div class="membership_body">
 			<div style="display: flex; flex-direction: column">
@@ -44,7 +58,8 @@ function checkNum(){
 					<svg class="naverIcon" width="1em" height="1em"
 						xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 18.31">
                         <title data-reactid="44">naverIcon</title>
-                        <path d="M20,19.15H13.33A0.34,0.34,0,0,1,13,19L7,10.22,6.84,10v9.15H0V0.85H6.68A0.32, 0.32,0,0,1,7,1l6,8.75a0.82,0.82,0,0,0,.19.22V0.86H20v18.3Z"
+                        <path
+							d="M20,19.15H13.33A0.34,0.34,0,0,1,13,19L7,10.22,6.84,10v9.15H0V0.85H6.68A0.32, 0.32,0,0,1,7,1l6,8.75a0.82,0.82,0,0,0,.19.22V0.86H20v18.3Z"
 							transform="translate(0 -0.84)" fill="#fff" data-reactid="45"></path>
                     </svg> 네이버 아이디로로그인
 				</a>
@@ -53,40 +68,53 @@ function checkNum(){
 				<span><span>또는</span>
 			</div>
 
-			<form class="userBox" autocomplete="on" name="regForm" method="post" action="MemberProc.jsp">
-					<label class="signIn" for="user_fullname">이름</label> 
-					
-					
-					<!--가입 이름 name:u_nm  -->
-					<input class="inputTag" type="text" autocomplete="username" required="" id="user_fullname" placeholder="사용하실 이름을 입력해주세요" name="u_nm"
-					value=""> 
-					
-					
-					<!--가입 이메일 name: mem_email  -->
-					<label  for="login" >이메일</label> 
-					<input type="button" onClick="checkNum()" value="인증번호">
-					<input type="email" required="" autocomplete="email" class="inputTag"
-					id="email" placeholder="이메일 주소를 입력해주세요" name="u_email" value="" onkeyup="emailCheck()">
-					<p id="email-check" style="font-size: 9px; color:red;margin:0;"></p>
-					<!--이메일 재 확인 name:confirm  -->
-					<input type="email" required="" autocomplete="email" class="inputTag" id="login_confirm" placeholder="이메일 주소를 확인합니다"
-					name="emailConfirm" value=""> 
-					
-					<!--비밀번호 name:mem_pwd  -->
-					<label class="signIn" for="password">비밀번호</label> 
-					<input type="password" class="inputTag" id="password" placeholder="비밀번호 입력" autocomplete="current-password"
-					required="" autocapitalize="off" autocorrect="off" spellcheck="off" name="u_pwd" value=""> 
-					
-					<!--비밀번호 재 확인 name:pswConfirm  -->
-					<input type="password" class="inputTag" id="password_confirm" placeholder="비밀번호를 확인합니다" autocomplete="current-password" required="" autocapitalize="off"
-					autocorrect="off" spellcheck="off" name="pwdConfirm" value="">
-					
-					
-					<!-- 가입하기 버튼!! submit-->
-					<input class="loginButton" type="button" label="가입하기"  onclick="inputCheck()" style="margin: 20px 0; height: 45px;" value="다음">
+			<form class="userBox" autocomplete="on" name="regForm" method="post"
+				action="MemberProc.jsp">
+				<label class="signIn" for="user_fullname">이름</label>
+
+
+				<!--가입 이름 name:u_nm  -->
+				<input class="inputTag" type="text" autocomplete="username"
+					required="" id="user_fullname" placeholder="사용하실 이름을 입력해주세요"
+					name="u_nm" value="">
+
+
+				<!--가입 이메일 name: mem_email  -->
+				<label for="login">이메일</label> <input type="email" required=""
+					autocomplete="email" class="inputTag" id="email"
+					placeholder="이메일 주소를 입력해주세요" name="u_email" value=""
+					onkeyup="emailCheck()">
+				<p id="email-check" style="font-size: 9px; color: red; margin: 0;"></p>
+
+				<!-- 인증번호---------- -->
+				<input type="button" onClick="checkNum()" value="인증번호"> <input
+					type="hidden" name="code_check" value="<%=getRandom() %>">
+				<!--이메일 재 확인 name:confirm  -->
+				<input type="email" required="" autocomplete="email"
+					class="inputTag" id="login_confirm" placeholder="이메일 주소를 확인합니다"
+					name="emailConfirm" value="">
+
+				<!--비밀번호 name:mem_pwd  -->
+				<label class="signIn" for="password">비밀번호</label> <input
+					type="password" class="inputTag" id="password"
+					placeholder="비밀번호 입력" autocomplete="current-password" required=""
+					autocapitalize="off" autocorrect="off" spellcheck="off"
+					name="u_pwd" value="">
+
+				<!--비밀번호 재 확인 name:pswConfirm  -->
+				<input type="password" class="inputTag" id="password_confirm"
+					placeholder="비밀번호를 확인합니다" autocomplete="current-password"
+					required="" autocapitalize="off" autocorrect="off" spellcheck="off"
+					name="pwdConfirm" value="">
+
+
+				<!-- 가입하기 버튼!! submit-->
+				<input class="loginButton" type="button" label="가입하기"
+					onclick="inputCheck()" style="margin: 20px 0; height: 45px;"
+					value="다음">
 			</form>
-			<a class="idExist" href="login.jsp"> <span style="color: #757575;"
-				data-reactid="57">이미 계정이 있으신가요?</span>
+			<a class="idExist" href="login.jsp"> <span
+				style="color: #757575;" data-reactid="57">이미 계정이 있으신가요?</span>
 			</a>
 			<div style="text-align: center; margin-top: 10px;" data-reactid="59">
 				<a style="text-decoration: none; color: #ff4543;" href="login.jsp"

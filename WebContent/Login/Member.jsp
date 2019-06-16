@@ -23,6 +23,10 @@ function emailCheck() {
 	httpRequest.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
 	httpRequest.send("email="+input);	//변수에 데이터 넣으면 post방식
 }
+function checkNum(){
+	document.regForm.action="../emailNum";
+	document.regForm.submit();
+}
 
 
 </script>
@@ -60,6 +64,7 @@ function emailCheck() {
 					
 					<!--가입 이메일 name: mem_email  -->
 					<label  for="login" >이메일</label> 
+					<input type="button" onClick="checkNum()" value="인증번호">
 					<input type="email" required="" autocomplete="email" class="inputTag"
 					id="email" placeholder="이메일 주소를 입력해주세요" name="u_email" value="" onkeyup="emailCheck()">
 					<p id="email-check" style="font-size: 9px; color:red;margin:0;"></p>

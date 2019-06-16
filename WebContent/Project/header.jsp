@@ -8,9 +8,6 @@
 	String u_idx = (String) session.getAttribute("u_idx");
 	String u_img = (String) session.getAttribute("u_img");
 	String u_nm = (String) session.getAttribute("u_nm");
-	out.println("u_idx: " + u_idx);
-	out.println("u_nm: " + u_nm);
-	out.println("u_img: " + u_img);
 %>
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />
 

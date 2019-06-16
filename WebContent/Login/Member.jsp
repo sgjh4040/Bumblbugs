@@ -45,7 +45,7 @@ function checkNum(){
 </script>
 </head>
 <body>
-<div>test: <%=code_check %></div>
+<div>code_check test: <%=code_check %></div>
 	<div class="membership_wrap">
 		<div class="membership_body">
 			<div style="display: flex; flex-direction: column">

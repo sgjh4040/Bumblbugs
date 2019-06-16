@@ -11,7 +11,7 @@ String tf = request.getParameter("tf");
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-<link rel="stylesheet" type="text/css" href="login.css">
+<link rel="stylesheet" type="text/css" href="../css/login.css">
 <script type="text/javascript">
 
 	

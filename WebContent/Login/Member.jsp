@@ -11,7 +11,10 @@
 	}
 	%>
 	
-	<%String code_check = request.getParameter("code_check"); %>
+	<%
+		String code_check = request.getParameter("code_check");
+		String u_email = request.getParameter("u_email");
+	%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,6 +49,7 @@ function checkNum(){
 </head>
 <body>
 <div>code_check test: <%=code_check %></div>
+<div>u_email: <%=u_email %></div>
 	<div class="membership_wrap">
 		<div class="membership_body">
 			<div style="display: flex; flex-direction: column">
@@ -80,10 +84,33 @@ function checkNum(){
 
 
 				<!--가입 이메일 name: mem_email  -->
-				<label for="login">이메일</label> <input type="email" required=""
+				<label for="login">이메일</label> 
+				
+				<%
+				if( u_email == null || u_email.equals("")  || u_email .equals("null")){
+					%>
+					<input type="email" required=""
 					autocomplete="email" class="inputTag" id="email"
 					placeholder="이메일 주소를 입력해주세요" name="u_email" value=""
 					onkeyup="emailCheck()">
+					<%
+				}else{
+					%>
+					<input type="email" required=""
+					autocomplete="email" class="inputTag" id="email"
+					placeholder="이메일 주소를 입력해주세요" name="u_email" value="<%=u_email%>"
+					onkeyup="emailCheck()">
+					
+					<% 
+					
+				}
+				
+				%>
+				
+				
+					
+					
+					
 				<p id="email-check" style="font-size: 9px; color: red; margin: 0;"></p>
 
 				<!-- 인증번호---------- -->

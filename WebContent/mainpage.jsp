@@ -38,7 +38,7 @@
 <script src="js/Main.js"></script>
 
 
-<title>BumbleBug</title>
+<title>BumbleBugss</title>
 <link
 	href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap"
 	rel="stylesheet">

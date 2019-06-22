@@ -30,7 +30,7 @@ MariaDB
 
 ### 프로젝트 소개
 담당 view
-<div>![mypart1](https://user-images.githubusercontent.com/50870603/59963816-73316b00-9533-11e9-8207-3494902d2bf5.PNG)</div>
+![mypart1](https://user-images.githubusercontent.com/50870603/59963816-73316b00-9533-11e9-8207-3494902d2bf5.PNG)
 
 <div>1.이메일 존재유무 확인
 Ajax를 이용하여 email input창에 입력하게 되면 onkeyup 속성에 의해 실시간으로 DB와 연동하게 되고 이메일 존재 유무를 판단합니다.
@@ -41,9 +41,7 @@ Ajax를 이용하여 email input창에 입력하게 되면 onkeyup 속성에 의
 인증번호가 불일치 할경우 javascript 를 활용해서 인증되지 않았다는 메시지 또는 일치할 경우 인증되었습니다. 라는 메시지가 나오게 됩니다.
 </div>
 
-<br>
-<br>
-<div>![mypart2](https://user-images.githubusercontent.com/50870603/59963839-98be7480-9533-11e9-8d03-94e33c3a89e9.PNG)</div>
+![mypart2](https://user-images.githubusercontent.com/50870603/59963839-98be7480-9533-11e9-8d03-94e33c3a89e9.PNG)
 <div>
 3.나의 후원 현황 
 하나의 프로젝트에 관한 정보를 가지고 오기 위해서는 여러 개의 table에서 정보를 가져 와야합니다. Join을 이용하여 여러 table에서 정보를 bean으로 저장하여 보여줍니다. 

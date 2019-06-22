@@ -7,7 +7,7 @@
 	boolean result = mDAO.checkEmail(email);
 
 	if (result) {
-		//out.println("이메일 존재합니다");
+		
 %>
 <span>이메일 존재합니다.</span>
 <input type="hidden" id="exist" name="exist" value="1">

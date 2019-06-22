@@ -21,7 +21,7 @@
 <meta charset="UTF-8">
 <link href="${contextPath}/css/login.css" rel="stylesheet"
 	type="text/css" media="all">
-<script type="text/javascript" src="../js/script.js"></script>
+<script type="text/javascript" src="${contextPath}/js/script.js"></script>
 <title>Insert title here</title>
 
 <script>
@@ -35,15 +35,42 @@ function emailCheck() {
 		}
 	};
 	// POST 방식의 요청은 데이터를 Http 헤더에 포함시켜 전송함.
-	httpRequest.open("POST", "emailCheck.jsp", true);
+	
+	httpRequest.open("POST", "${contextPath}/Login/emailCheck.jsp", true);
 	httpRequest.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
 	httpRequest.send("email="+input);	//변수에 데이터 넣으면 post방식
 }
 function checkNum(){
-	document.regForm.action="../emailNum";
-	document.regForm.submit();
+	var input = document.getElementById("email").value;
+	if(input==null || input==""){
+		alert("이메일을 먼저 입력해 주세요");
+		document.getElementById("email").focus();
+	}else{
+		document.regForm.action="../emailNum";
+		document.regForm.submit();
+	};
+	
+	
+	
 }
-
+function checkCode(){
+	var inputcode = document.getElementById("code").value;
+	var code_check = document.getElementById("code_num").value;
+	console.log(inputcode);
+	console.log(code_check);
+	
+	
+	if(inputcode==code_check){
+		document.getElementById('checkCode').style.color = 'blue';
+		document.getElementById('checkCode').innerHTML = '인증되었습니다.';
+		
+	}else{
+		
+		document.getElementById('checkCode').style.color = 'red';
+		document.getElementById('checkCode').innerHTML = '잘못된 인증번호입니다.';
+	}
+	
+}
 
 </script>
 </head>
@@ -73,7 +100,7 @@ function checkNum(){
 			</div>
 
 			<form class="userBox" autocomplete="on" name="regForm" method="post"
-				action="MemberProc.jsp">
+				action="${contextPath}/Login/MemberProc.jsp">
 				<label class="signIn" for="user_fullname">이름</label>
 
 
@@ -116,6 +143,11 @@ function checkNum(){
 				<!-- 인증번호---------- -->
 				<input type="button" onClick="checkNum()" value="인증번호"> <input
 					type="hidden" name="code_check" value="<%=getRandom() %>">
+					<input type="text" name="code" id="code" onkeyup="checkCode()" placeholder="인증번호를 입력해주세요">
+					<div id="checkCode"></div>
+					<input type="hidden" name="code_num" id="code_num" value="<%=code_check %>">
+				
+				
 				<!--이메일 재 확인 name:confirm  -->
 				<input type="email" required="" autocomplete="email"
 					class="inputTag" id="login_confirm" placeholder="이메일 주소를 확인합니다"

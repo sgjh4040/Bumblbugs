@@ -11,7 +11,6 @@ function inputCheck(){
 	}
 	if(document.regForm.u_email.value != document.regForm.emailConfirm.value){
 		alert("이메일이 일치하지 않습니다.");
-		document.regForm.repwd.value="";
 		document.regForm.repwd.focus();
 		return;
 	}
@@ -24,6 +23,16 @@ function inputCheck(){
 		alert("비번이 일치하지 않습니다.");
 		document.regForm.repwd.value="";
 		document.regForm.repwd.focus();
+		return;
+	}
+	if(document.regForm.exist.value=="1"){
+		alert("가입된 아이디입니다.");
+		return;
+	}else{
+		
+	}
+	if(document.regForm.code.value != document.regForm.code_num.value){
+		alert("코드번호 일치하지 않아요")
 		return;
 	}
 	

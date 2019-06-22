@@ -31,4 +31,7 @@ MariaDB
 ### 프로젝트 소개
 담당 view
 ![mypart1](https://user-images.githubusercontent.com/50870603/59963816-73316b00-9533-11e9-8207-3494902d2bf5.PNG)
+<br>
+<br>
+![mypart2](https://user-images.githubusercontent.com/50870603/59963839-98be7480-9533-11e9-8d03-94e33c3a89e9.PNG)
 
